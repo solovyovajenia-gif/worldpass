@@ -1181,20 +1181,23 @@
       <h3 data-i18n="form.title">Get a consultation</h3>
       <p class="form-lead" data-i18n="form.lead">Tell us a few details — a senior consultant will reply within one working day.</p>
       <div class="form-row">
-        <div class="field"><label for="fname" data-i18n="form.name">Full name</label><input id="fname" name="fname" type="text" required autocomplete="name"></div>
-        <div class="field"><label for="email" data-i18n="form.email_lbl">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="fname" data-i18n="form.name">Full name</label><input id="fname" name="fname" type="text" autocomplete="name"></div>
+        <div class="field"><label for="email" data-i18n="form.email_lbl">Email</label><input id="email" name="email" type="email" autocomplete="email"></div>
       </div>
       <div class="form-row">
         <div class="field"><label for="phone" data-i18n="form.phone">Phone</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
         <div class="field"><label for="service" data-i18n="form.service">Service</label>
           <select id="service" name="service" required data-i18n-select="service">
             <option value="" data-i18n="form.service_opt">Select a service</option>
-            <option value="Citizenship" data-i18n="form.svc_cit">Citizenship</option>
+            <option value="Citizenship — Turkey" data-i18n="form.svc_cit_tr">Citizenship — Turkey</option>
+            <option value="Citizenship — Caribbean" data-i18n="form.svc_cit_cb">Citizenship — Caribbean</option>
+            <option value="Citizenship — Vanuatu" data-i18n="form.svc_cit_vn">Citizenship — Vanuatu</option>
+            <option value="Citizenship — São Tomé" data-i18n="form.svc_cit_st">Citizenship — São Tomé and Príncipe</option>
             <option value="Residency" data-i18n="form.svc_res">Residency</option>
-            <option value="Schengen visa" data-i18n="form.svc_schengen">Schengen visa</option>
-            <option value="USA visa" data-i18n="form.svc_usa">USA visa</option>
-            <option value="UK visa" data-i18n="form.svc_uk">UK visa</option>
-            <option value="UAE services" data-i18n="form.svc_uae">UAE services</option>
+            <option value="Visa — Schengen" data-i18n="form.svc_visa_sch">Visa — Schengen</option>
+            <option value="Visa — USA" data-i18n="form.svc_visa_usa">Visa — USA</option>
+            <option value="Visa — UK" data-i18n="form.svc_visa_uk">Visa — United Kingdom</option>
+            <option value="Visa — Other countries" data-i18n="form.svc_visa_other">Visa — Other countries</option>
             <option value="Other" data-i18n="form.svc_other">Other</option>
           </select>
         </div>
@@ -1414,7 +1417,7 @@ var T = {
     'ach.years':'Years of expertise','ach.cases':'Cases handled','ach.approval':'Approval rate','ach.countries':'Countries covered',
     'test.eyebrow':'Client word','test.quote':'They didn\'t sell us a country. They asked where we wanted to wake up in <em>five years</em> — and built the plan around that.','test.attr':'<b>A. K.</b> — entrepreneur, family relocation to Portugal',
     'apply.title':'Tell us where you <em>want to be.</em>','apply.sub':"Send a short brief and we'll come back within one working day with two or three viable routes — before you commit to anything.",'contact.address':'Dubai, UAE',
-    'form.title':'Get a consultation','form.lead':'Tell us a few details — a senior consultant will reply within one working day.','form.name':'Full name','form.email_lbl':'Email','form.phone':'Phone','form.service':'Service','form.service_opt':'Select a service','form.svc_cit':'Citizenship','form.svc_res':'Residency','form.svc_schengen':'Schengen visa','form.svc_usa':'USA visa','form.svc_uk':'UK visa','form.svc_uae':'UAE services','form.svc_other':'Other','form.msg':'Message','form.msg_placeholder':'Family size, current residency, timeline…','form.privacy':'We keep your data private. We reply within 2 hours on business days.','form.submit':'Send request',
+    'form.title':'Get a consultation','form.lead':'Tell us a few details — a senior consultant will reply within one working day.','form.name':'Full name','form.email_lbl':'Email','form.phone':'Phone','form.service':'Service','form.service_opt':'Select a service','form.svc_cit_tr':'Citizenship — Turkey','form.svc_cit_cb':'Citizenship — Caribbean','form.svc_cit_vn':'Citizenship — Vanuatu','form.svc_cit_st':'Citizenship — São Tomé and Príncipe','form.svc_res':'Residency','form.svc_visa_sch':'Visa — Schengen','form.svc_visa_usa':'Visa — USA','form.svc_visa_uk':'Visa — United Kingdom','form.svc_visa_other':'Visa — Other countries','form.svc_other':'Other','form.msg':'Message','form.msg_placeholder':'Family size, current residency, timeline…','form.privacy':'We keep your data private. We reply within 2 hours on business days.','form.submit':'Send request',
     'success.title':'Request sent!','success.desc':'Thank you — our manager will get back to you shortly.','success.btn':'Got it',
     'foot.tagline':'A UAE-based migration service helping individuals, families and businesses obtain citizenship, residency and visas worldwide — quietly, precisely and without templates.','foot.sitemap':'Sitemap','foot.cit_title':'Citizenship','foot.res_title':'Residences','foot.vis_title':'Visas','foot.others':'Others','foot.privacy':'Privacy Policy','foot.turkey':'Turkey','foot.caribbean':'Caribbean','foot.vanuatu':'Vanuatu','foot.saotome':'São Tomé','foot.armenia':'Armenia','foot.georgia':'Georgia','foot.oman':'Oman','foot.uae':'UAE','foot.europe':'Europe','foot.schengen':'Schengen','foot.usa':'USA','foot.uk':'UK','foot.disclaimer':'World Pass Consulting FZ-LLC is a private consulting company. We are not a government authority and do not represent any embassy, consulate or immigration department. All services are advisory. Processing times and success rates are based on historical data and may vary by case.'
   },
@@ -1448,7 +1451,7 @@ var T = {
     'ach.years':'Лет экспертизы','ach.cases':'Закрытых дел','ach.approval':'Доля одобрений','ach.countries':'Охваченных стран',
     'test.eyebrow':'Отзыв клиента','test.quote':'Они не продавали нам страну. Они спросили, где мы хотим просыпаться через <em>пять лет</em> — и выстроили план вокруг этого.','test.attr':'<b>А. К.</b> — предприниматель, переезд семьи в Португалию',
     'apply.title':'Скажите, куда хотите <em>переехать.</em>','apply.sub':'Напишите нам в двух словах о своей ситуации. В течение одного рабочего дня вернёмся с двумя-тремя конкретными вариантами — без обязательств с вашей стороны.','contact.address':'Дубай, ОАЭ',
-    'form.title':'Оставьте заявку!','form.lead':'Расскажите о вашей ситуации — наш специалист свяжется с вами в ближайшее время и подберёт решение, подходящее именно вам.','form.name':'Имя','form.email_lbl':'Email','form.phone':'Телефон','form.service':'Услуга','form.service_opt':'Выберите услугу','form.svc_cit':'Гражданство','form.svc_res':'Резидентство','form.svc_schengen':'Шенгенская виза','form.svc_usa':'Виза в США','form.svc_uk':'Виза в Великобританию','form.svc_uae':'Услуги в ОАЭ','form.svc_other':'Другое','form.msg':'Сообщение','form.msg_placeholder':'Состав семьи, текущее резидентство, сроки…','form.privacy':'Ваши данные в безопасности. Отвечаем в течение 2 часов по рабочим дням.','form.submit':'Отправить заявку',
+    'form.title':'Оставьте заявку!','form.lead':'Расскажите о вашей ситуации — наш специалист свяжется с вами в ближайшее время и подберёт решение, подходящее именно вам.','form.name':'Имя','form.email_lbl':'Email','form.phone':'Телефон','form.service':'Услуга','form.service_opt':'Выберите услугу','form.svc_cit_tr':'Гражданство — Турция','form.svc_cit_cb':'Гражданство — Карибы','form.svc_cit_vn':'Гражданство — Вануату','form.svc_cit_st':'Гражданство — Сан-Томе и Принсипи','form.svc_res':'Резидентство','form.svc_visa_sch':'Виза — Шенген','form.svc_visa_usa':'Виза — США','form.svc_visa_uk':'Виза — Великобритания','form.svc_visa_other':'Виза — Другие страны','form.svc_other':'Другое','form.msg':'Сообщение','form.msg_placeholder':'Состав семьи, текущее резидентство, сроки…','form.privacy':'Ваши данные в безопасности. Отвечаем в течение 2 часов по рабочим дням.','form.submit':'Отправить заявку',
     'success.title':'Заявка отправлена!','success.desc':'Спасибо — наш менеджер свяжется с вами в ближайшее время.','success.btn':'Понятно',
     'foot.tagline':'Миграционный сервис из ОАЭ. Помогаем частным лицам, семьям и бизнесу получить гражданство, ВНЖ и визы — точно, без лишней огласки и без шаблонных решений.','foot.sitemap':'Карта сайта','foot.cit_title':'Гражданство','foot.res_title':'Резидентство','foot.vis_title':'Визы','foot.others':'Другие страны','foot.privacy':'Политика конфиденциальности','foot.turkey':'Турция','foot.caribbean':'Карибские острова','foot.vanuatu':'Вануату','foot.saotome':'Сан-Томе','foot.armenia':'Армения','foot.georgia':'Грузия','foot.oman':'Оман','foot.uae':'ОАЭ','foot.europe':'Европа','foot.schengen':'Шенген','foot.usa':'США','foot.uk':'Великобритания','foot.disclaimer':'World Pass Consulting FZ-LLC — частная консалтинговая компания. Мы не являемся государственным органом и не представляем ни одно посольство, консульство или иммиграционный департамент. Все услуги носят консультационный характер. Сроки обработки и показатели одобряемости основаны на исторических данных и могут варьироваться в зависимости от конкретного дела.'
   }
