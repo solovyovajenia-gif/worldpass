@@ -411,6 +411,7 @@
   .foot-social a{width:32px;height:32px;border-radius:50%;border:1px solid var(--line-2);display:grid;place-items:center;color:var(--mute);transition:.2s}
   .foot-social a:hover{border-color:var(--navy);color:var(--navy)}
   .foot-social a svg{width:14px;height:14px;fill:currentColor}
+  .foot-legal{color:var(--mute);font-size:11px;line-height:1.6;margin-top:20px;text-align:center;opacity:.8}
   .foot-disclaimer{color:var(--mute);font-size:10px;line-height:1.5;margin-top:32px;padding-top:16px;border-top:1px solid var(--line);max-width:100%;opacity:.55;text-align:center}
 
   /* ═══ CONTACT GRID ═══ */
@@ -1266,10 +1267,13 @@
     </div>
   </div>
   <div class="wrap foot-base">
-    <span>© 2026 World Pass Consulting FZ-LLC</span> <span><a href="#" data-i18n="foot.privacy" onclick="event.preventDefault();document.getElementById('ppOverlay').classList.add('on')" style="border-bottom:1px solid var(--line);padding-bottom:1px">Privacy Policy</a></span>
+    <span>© 2026 World Pass Services FZ-LLC</span> <span><a href="/privacy" data-i18n="foot.privacy" style="border-bottom:1px solid var(--line);padding-bottom:1px">Privacy Policy</a></span>
   </div>
   <div class="wrap">
-    <p class="foot-disclaimer" data-i18n="foot.disclaimer">World Pass Consulting FZ-LLC is a private consulting company. We are not a government authority and do not represent any embassy, consulate or immigration department. All services are advisory. Processing times and success rates are based on historical data and may vary by case.</p>
+    <p class="foot-legal">World Pass Services FZ-LLC &middot; Licence No. 47036649 &middot; CWEP9498, Compass Building, Al Shohada Road, Al Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates &middot; info@worldpass.ae</p>
+  </div>
+  <div class="wrap">
+    <p class="foot-disclaimer" data-i18n="foot.disclaimer">World Pass Services FZ-LLC is a private consulting company. We are not a government authority and do not represent any embassy, consulate or immigration department. All services are advisory. Processing times and success rates are based on historical data and may vary by case.</p>
   </div>
 </footer>
 
@@ -1277,7 +1281,7 @@
   <div class="pp-modal">
     <button class="pp-close" onclick="document.getElementById('ppOverlay').classList.remove('on')" aria-label="Close">×</button>
     <h2>Data Privacy Policy</h2>
-    <p class="pp-updated">Last updated: August 2026</p>
+    <p class="pp-updated">Last updated: September 2026</p>
 
     <h3>Information We Collect</h3>
     <p>We may collect personal information that you voluntarily provide to us when you express interest in obtaining information about our services, including your name, email address, phone number, and other information you choose to provide.</p>
@@ -1291,6 +1295,9 @@
       <li>To protect our services and business operations</li>
     </ul>
 
+    <h3>Marketing Communications</h3>
+    <p>World Pass Services FZ-LLC may send you notifications about new products and services, special offers and events by email, phone, SMS or messaging services such as WhatsApp and Telegram. You may opt out of such communications at any time by replying to any message with the word "STOP", by using the unsubscribe link where available, or by emailing us at info@worldpass.ae with the subject "Unsubscribe". Opting out will not affect communications that are necessary to deliver a service you have requested.</p>
+
     <h3>Sharing Your Information</h3>
     <p>We may share your personal information with trusted third-party service providers who assist us in operating our website and conducting our business, subject to confidentiality agreements.</p>
 
@@ -1302,8 +1309,10 @@
 
     <h3>Contact Us</h3>
     <div class="pp-contact">
-      <p><strong>World Pass Consulting FZ-LLC</strong><br>
-      Dubai, UAE<br>
+      <p><strong>World Pass Services FZ-LLC</strong><br>
+      Licence No. 47036649<br>
+      CWEP9498, Compass Building, Al Shohada Road,<br>
+      Al Hamra Industrial Zone-FZ, Ras Al Khaimah, United Arab Emirates<br>
       Email: info@worldpass.ae</p>
     </div>
   </div>
@@ -1506,7 +1515,7 @@ var T = {
     'apply.title':'Tell us where you <em>want to be.</em>','apply.sub':"Send a short brief and we'll come back within one working day with two or three viable routes — before you commit to anything.",'contact.address':'Dubai, UAE',
     'form.title':'Get a consultation','form.lead':'Tell us a few details — a senior consultant will reply within one working day.','form.name':'Full name','form.email_lbl':'Email','form.phone':'Phone','form.service':'Service','form.service_opt':'Select a service','form.svc_cit_tr':'Citizenship — Turkey','form.svc_cit_cb':'Citizenship — Caribbean','form.svc_cit_vn':'Citizenship — Vanuatu','form.svc_cit_st':'Citizenship — São Tomé and Príncipe','form.svc_res':'Residency','form.svc_visa_sch':'Visa — Schengen','form.svc_visa_usa':'Visa — USA','form.svc_visa_uk':'Visa — United Kingdom','form.svc_visa_other':'Visa — Other countries','form.svc_other':'Other','form.msg':'Message','form.msg_placeholder':'Family size, current residency, timeline…','form.privacy':'We keep your data private. We reply within 2 hours on business days.','form.submit':'Send request',
     'success.title':'Request sent!','success.desc':'Thank you — our manager will get back to you shortly.','success.btn':'Got it',
-    'foot.tagline':'A UAE-based migration service helping individuals, families and businesses obtain citizenship, residency and visas worldwide — quietly, precisely and without templates.','foot.sitemap':'Sitemap','foot.cit_title':'Citizenship','foot.res_title':'Residences','foot.vis_title':'Visas','foot.others':'Others','foot.privacy':'Privacy Policy','foot.turkey':'Turkey','foot.caribbean':'Caribbean','foot.vanuatu':'Vanuatu','foot.saotome':'São Tomé','foot.armenia':'Armenia','foot.georgia':'Georgia','foot.oman':'Oman','foot.uae':'UAE','foot.europe':'Europe','foot.schengen':'Schengen','foot.usa':'USA','foot.uk':'UK','foot.disclaimer':'World Pass Consulting FZ-LLC is a private consulting company. We are not a government authority and do not represent any embassy, consulate or immigration department. All services are advisory. Processing times and success rates are based on historical data and may vary by case.'
+    'foot.tagline':'A UAE-based migration service helping individuals, families and businesses obtain citizenship, residency and visas worldwide — quietly, precisely and without templates.','foot.sitemap':'Sitemap','foot.cit_title':'Citizenship','foot.res_title':'Residences','foot.vis_title':'Visas','foot.others':'Others','foot.privacy':'Privacy Policy','foot.turkey':'Turkey','foot.caribbean':'Caribbean','foot.vanuatu':'Vanuatu','foot.saotome':'São Tomé','foot.armenia':'Armenia','foot.georgia':'Georgia','foot.oman':'Oman','foot.uae':'UAE','foot.europe':'Europe','foot.schengen':'Schengen','foot.usa':'USA','foot.uk':'UK','foot.disclaimer':'World Pass Services FZ-LLC is a private consulting company. We are not a government authority and do not represent any embassy, consulate or immigration department. All services are advisory. Processing times and success rates are based on historical data and may vary by case.'
   },
   ru: {
     'strip.label':'Эксклюзивные программы резидентства','strip.countries':'Армения · Грузия · Оман · ОАЭ · Европа →',
@@ -1540,7 +1549,7 @@ var T = {
     'apply.title':'Скажите, куда хотите <em>переехать.</em>','apply.sub':'Напишите нам в двух словах о своей ситуации. В течение одного рабочего дня вернёмся с двумя-тремя конкретными вариантами — без обязательств с вашей стороны.','contact.address':'Дубай, ОАЭ',
     'form.title':'Оставьте заявку!','form.lead':'Расскажите о вашей ситуации — наш специалист свяжется с вами в ближайшее время и подберёт решение, подходящее именно вам.','form.name':'Имя','form.email_lbl':'Email','form.phone':'Телефон','form.service':'Услуга','form.service_opt':'Выберите услугу','form.svc_cit_tr':'Гражданство — Турция','form.svc_cit_cb':'Гражданство — Карибы','form.svc_cit_vn':'Гражданство — Вануату','form.svc_cit_st':'Гражданство — Сан-Томе и Принсипи','form.svc_res':'Резидентство','form.svc_visa_sch':'Виза — Шенген','form.svc_visa_usa':'Виза — США','form.svc_visa_uk':'Виза — Великобритания','form.svc_visa_other':'Виза — Другие страны','form.svc_other':'Другое','form.msg':'Сообщение','form.msg_placeholder':'Состав семьи, текущее резидентство, сроки…','form.privacy':'Ваши данные в безопасности. Отвечаем в течение 2 часов по рабочим дням.','form.submit':'Отправить заявку',
     'success.title':'Заявка отправлена!','success.desc':'Спасибо — наш менеджер свяжется с вами в ближайшее время.','success.btn':'Понятно',
-    'foot.tagline':'Миграционный сервис из ОАЭ. Помогаем частным лицам, семьям и бизнесу получить гражданство, ВНЖ и визы — точно, без лишней огласки и без шаблонных решений.','foot.sitemap':'Карта сайта','foot.cit_title':'Гражданство','foot.res_title':'Резидентство','foot.vis_title':'Визы','foot.others':'Другие страны','foot.privacy':'Политика конфиденциальности','foot.turkey':'Турция','foot.caribbean':'Карибские острова','foot.vanuatu':'Вануату','foot.saotome':'Сан-Томе','foot.armenia':'Армения','foot.georgia':'Грузия','foot.oman':'Оман','foot.uae':'ОАЭ','foot.europe':'Европа','foot.schengen':'Шенген','foot.usa':'США','foot.uk':'Великобритания','foot.disclaimer':'World Pass Consulting FZ-LLC — частная консалтинговая компания. Мы не являемся государственным органом и не представляем ни одно посольство, консульство или иммиграционный департамент. Все услуги носят консультационный характер. Сроки обработки и показатели одобряемости основаны на исторических данных и могут варьироваться в зависимости от конкретного дела.'
+    'foot.tagline':'Миграционный сервис из ОАЭ. Помогаем частным лицам, семьям и бизнесу получить гражданство, ВНЖ и визы — точно, без лишней огласки и без шаблонных решений.','foot.sitemap':'Карта сайта','foot.cit_title':'Гражданство','foot.res_title':'Резидентство','foot.vis_title':'Визы','foot.others':'Другие страны','foot.privacy':'Политика конфиденциальности','foot.turkey':'Турция','foot.caribbean':'Карибские острова','foot.vanuatu':'Вануату','foot.saotome':'Сан-Томе','foot.armenia':'Армения','foot.georgia':'Грузия','foot.oman':'Оман','foot.uae':'ОАЭ','foot.europe':'Европа','foot.schengen':'Шенген','foot.usa':'США','foot.uk':'Великобритания','foot.disclaimer':'World Pass Services FZ-LLC — частная консалтинговая компания. Мы не являемся государственным органом и не представляем ни одно посольство, консульство или иммиграционный департамент. Все услуги носят консультационный характер. Сроки обработки и показатели одобряемости основаны на исторических данных и могут варьироваться в зависимости от конкретного дела.'
   }
 };
 
