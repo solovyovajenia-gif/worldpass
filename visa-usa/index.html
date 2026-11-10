@@ -131,8 +131,6 @@ html:not(.js) .intro,.intro.off{display:none}
 @media(prefers-reduced-motion:reduce){.intro{display:none}}
 
 /* ========= header (usatravel) ========= */
-.top-space{height:10px;background:var(--mist)}
-@media(max-width:1023px){.top-space{height:20px}}
 .header{position:sticky;top:0;z-index:50;background:var(--mist);border-bottom:1px solid transparent;transition:border-color .3s,box-shadow .3s}
 .header.scrolled{border-color:var(--line);box-shadow:0 6px 30px rgba(15,32,54,.05)}
 .header .container{display:flex;align-items:center;justify-content:space-between;height:87px;gap:24px}
@@ -704,15 +702,31 @@ ym(113526010,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:'dataLayer',
 .header{top:var(--strip-h,0px)}
 [id]{scroll-margin-top:calc(80px + var(--strip-h,0px))}
 .urg-strip:hover{background:linear-gradient(135deg,#253f65,#1a3350)}
-.urg-strip-inner{display:flex;align-items:center;justify-content:center;gap:12px;padding:11px 24px;flex-wrap:wrap;text-align:center}
-.urg-strip-ico{display:inline-flex;width:15px;height:15px;color:var(--sand);flex:none}
+.urg-strip-inner{display:flex;align-items:center;justify-content:center;gap:14px;padding:10px 24px;text-align:center;font-family:var(--sans)}
+.urg-strip-head,.urg-strip-body{display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
+.urg-strip-ico{display:inline-flex;width:14px;height:14px;color:var(--sand);flex:none}
 .urg-strip-ico svg{width:100%;height:100%;display:block}
-.urg-strip-label{white-space:nowrap;color:var(--sand);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase}
-.urg-strip-text{white-space:nowrap;color:rgba(255,255,255,.85);font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:.02em}
-.urg-mob{display:none}
-.urg-strip-inner{flex-wrap:nowrap}
-@media(max-width:999px){.urg-desk{display:none}.urg-mob{display:inline;white-space:nowrap}.urg-strip-inner{gap:8px;padding:9px 14px}.urg-strip-text{font-size:11px}}
-@media(max-width:360px){.urg-mob{font-size:10px}.urg-strip-inner{gap:6px;padding:8px 10px}}
+.urg-strip-label{color:var(--sand);font-size:11px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase}
+.urg-strip-chip{display:inline-flex;align-items:center;gap:6px;padding:3px 8px 3px 5px;border:1px solid rgba(200,182,154,.55);border-radius:999px;color:#fff;font-size:10px;font-weight:700;letter-spacing:.8px;line-height:1}
+.urg-strip-chip svg{width:16px;height:9px;border-radius:2px;display:block;box-shadow:0 0 0 1px rgba(255,255,255,.35)}
+.urg-strip-dot{width:4px;height:4px;border-radius:50%;background:rgba(200,182,154,.6);flex:none}
+.urg-strip-text{color:#fff;font-size:13px;font-weight:500;letter-spacing:.02em}
+.urg-strip-hl{color:var(--sand);font-size:13px;font-weight:700;letter-spacing:.02em}
+.urg-strip-arr{color:var(--sand);font-size:13px;font-weight:700;transition:transform .25s}
+.urg-strip:hover .urg-strip-arr{transform:translateX(3px)}
+@media(max-width:999px){
+  .urg-strip-inner{flex-direction:column;gap:4px;padding:9px 14px}
+  .urg-strip-dot{display:none}
+  .urg-strip-head{gap:7px}
+  .urg-strip-label{font-size:9.5px;letter-spacing:1px}
+  .urg-strip-chip{padding:2px 7px 2px 4px;font-size:9px}
+  .urg-strip-text,.urg-strip-hl,.urg-strip-arr{font-size:12px}
+}
+@media(max-width:360px){
+  .urg-strip-inner{padding:8px 10px}
+  .urg-strip-label{font-size:9px;letter-spacing:.8px}
+  .urg-strip-text,.urg-strip-hl,.urg-strip-arr{font-size:11px}
+}
 </style>
 <style id="wp-combo">
 /* country combobox: type-ahead input styled like .field inputs */
@@ -757,15 +771,21 @@ ym(113526010,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:'dataLayer',
 </defs></svg>
 
 <!-- header -->
-<div class="top-space" aria-hidden="true"></div>
 
 <!-- URGENT STRIP → #dates -->
 <a href="#dates" class="urg-strip" id="urgStrip">
   <div class="urg-strip-inner">
-    <span class="urg-strip-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
-    <span class="urg-strip-label urg-desk" data-en="Interview within the next month">Запись на интервью в ближайший месяц</span>
-    <span class="urg-strip-text urg-desk" data-en="Don't want to wait for months? We'll check the nearest B1/B2 dates →">Не хотите ждать несколько месяцев? Проверим ближайшие даты B1/B2 →</span>
-    <span class="urg-strip-text urg-mob" data-en="Interview within a month — check dates →">Интервью в ближайший месяц — проверить даты →</span>
+    <span class="urg-strip-head">
+      <span class="urg-strip-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+      <span class="urg-strip-label" data-en="Urgent interview appointment">Срочная запись на интервью</span>
+      <span class="urg-strip-chip"><svg viewBox="0 0 38 20" aria-hidden="true"><rect width="38" height="20" fill="#fff"/><rect y="0" width="38" height="1.54" fill="#B22234"/><rect y="3.08" width="38" height="1.54" fill="#B22234"/><rect y="6.16" width="38" height="1.54" fill="#B22234"/><rect y="9.24" width="38" height="1.54" fill="#B22234"/><rect y="12.32" width="38" height="1.54" fill="#B22234"/><rect y="15.4" width="38" height="1.54" fill="#B22234"/><rect y="18.48" width="38" height="1.54" fill="#B22234"/><rect width="15.2" height="10.77" fill="#3C3B6E"/></svg><span>B1/B2</span></span>
+    </span>
+    <span class="urg-strip-dot" aria-hidden="true"></span>
+    <span class="urg-strip-body">
+      <span class="urg-strip-text" data-en="US visa dates —">Даты на визу США —</span>
+      <span class="urg-strip-hl" data-en="within a month">в течение месяца</span>
+      <span class="urg-strip-arr" aria-hidden="true">→</span>
+    </span>
   </div>
 </a>
 <header class="header" id="header">
@@ -1494,9 +1514,8 @@ document.querySelectorAll('.lead-form').forEach(function(f){f.addEventListener('
     Object.keys(QL).forEach(function(k){lines.push(QL[k]+': '+(quizAnswers[k]||'—'));});
   }
   var msg=lines.join('\n');
-  var altVal=f.alt?f.alt.value.trim():'';
-  var emailVal='';var tgVal='';
-  if(altVal){if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(altVal))emailVal=altVal;if(/^@/.test(altVal))tgVal=altVal;}
+  /* как на usatravel.ae: alt уходит как есть, email пустой — e-mail/Telegram/номер раскладывает send.php */
+  var altVal=f.alt?f.alt.value.trim():'', emailVal='';
   var fd=new FormData();
   fd.append('fname',f.fname.value.trim());
   fd.append('phone',f.phone.value.trim());
