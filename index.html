@@ -2078,9 +2078,7 @@ var T = {
 };
 
 function detectLang(){
-  // 1) remembered manual choice wins
-  try{ var s = localStorage.getItem('wp-lang'); if(s === 'ru' || s === 'en') return s; }catch(e){}
-  // 2) otherwise detect from the browser language
+  // always detect from the browser language (manual choice is not remembered)
   try{
     var ls = navigator.languages || [navigator.language || 'en'];
     for(var i=0;i<ls.length;i++){ if((ls[i]||'').toLowerCase().indexOf('ru') === 0) return 'ru'; }
@@ -2122,7 +2120,7 @@ function applyLang(lang) {
   if(sel) sel.value = lang;
 }
 
-function setLang(lang){ try{ localStorage.setItem('wp-lang', lang); }catch(e){} applyLang(lang); }
+function setLang(lang){ applyLang(lang); } // language is not persisted
 
 // init
 applyLang(currentLang);
