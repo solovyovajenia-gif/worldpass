@@ -2078,10 +2078,10 @@ var T = {
 };
 
 function detectLang(){
-  // always detect from the browser language (manual choice is not remembered)
+  // detect from the browser's primary language only (same as the landing pages; choice not remembered)
   try{
-    var ls = navigator.languages || [navigator.language || 'en'];
-    for(var i=0;i<ls.length;i++){ if((ls[i]||'').toLowerCase().indexOf('ru') === 0) return 'ru'; }
+    var l = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase();
+    if(l.indexOf('ru') === 0) return 'ru';
   }catch(e){}
   return 'en';
 }
