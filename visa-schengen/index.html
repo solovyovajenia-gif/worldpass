@@ -775,6 +775,22 @@ ym(113526010,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:'dataLayer',
 .field-combo::after{content:"";position:absolute;right:16px;top:25px;width:6px;height:6px;border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);transform:rotate(45deg);pointer-events:none}
 .field-combo input{padding-right:40px}
 </style>
+<style id="wp-reviews">
+/* client reviews block */
+.reviews{background:var(--mist)}
+.reviews .container{max-width:1080px}
+.rev-head{text-align:center;max-width:680px;margin:0 auto clamp(28px,4vw,48px)}
+.rev-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+@media(max-width:767px){.rev-grid{grid-template-columns:1fr}}
+.rev-card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:34px 28px 26px;box-shadow:var(--shadow-1);display:flex;flex-direction:column;gap:16px;margin:0}
+.rev-card::before{content:"“";position:absolute;top:6px;left:20px;font-family:var(--serif);font-size:76px;line-height:1;color:var(--gold);opacity:.3;pointer-events:none}
+.rev-stars{color:var(--gold);font-size:15px;letter-spacing:3px;position:relative;z-index:1}
+.rev-text{font-family:var(--sans);font-size:15px;line-height:1.62;color:var(--ink);margin:0;position:relative;z-index:1}
+.rev-who{display:flex;align-items:center;gap:11px;margin-top:auto;padding-top:4px}
+.rev-ava{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--navy),#0F2036);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:600;font-size:15px;flex:none}
+.rev-name{font-family:var(--sans);font-weight:600;font-size:14px;color:var(--navy);line-height:1.2}
+.rev-meta{font-family:var(--sans);font-size:12px;color:var(--muted);letter-spacing:.02em}
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH6M543W" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1159,6 +1175,32 @@ ym(113526010,'init',{ssr:true,webvisor:true,clickmap:true,ecommerce:'dataLayer',
 </section>
 
 <!-- FINAL -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="rev-head reveal">
+      <span class="eyebrow" data-en="Reviews">Отзывы</span>
+      <h2 data-en="They trusted us — and got their visas">Нам доверились — и получили визы</h2>
+    </div>
+    <div class="rev-grid">
+      <figure class="rev-card reveal">
+        <div class="rev-stars" role="img" aria-label="5 / 5">★★★★★</div>
+        <blockquote class="rev-text" data-en="Thank you so much for your help with the visa! I’m so glad everything worked out. A special thank-you for your guidance, attention and support throughout the whole process.">Спасибо вам огромное за помощь с получением визы! Очень рада, что всё получилось! Отдельное спасибо за ваше сопровождение, внимание и поддержку на протяжении всего процесса.</blockquote>
+        <figcaption class="rev-who">
+          <span class="rev-ava" aria-hidden="true">Г</span>
+          <span><span class="rev-name">Галина</span><br><span class="rev-meta" data-en="Schengen visa">Шенгенская виза</span></span>
+        </figcaption>
+      </figure>
+      <figure class="rev-card reveal">
+        <div class="rev-stars" role="img" aria-label="5 / 5">★★★★★</div>
+        <blockquote class="rev-text" data-en="We got the visas — for exactly the dates we requested! A big thank-you for your help.">Мы получили визы! Ровно на заявленные даты. Большое спасибо за вашу помощь!</blockquote>
+        <figcaption class="rev-who">
+          <span class="rev-ava" aria-hidden="true">С</span>
+          <span><span class="rev-name">Сергей</span><br><span class="rev-meta" data-en="Schengen visa">Шенгенская виза</span></span>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 <section class="section" id="final" style="padding-top:0">
   <div class="container">
     <div class="final-card reveal">
